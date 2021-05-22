@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Development\\C#\\Gonzo3d\\Gonzo3d\\Gonzo3d.csproj": {}
+    "D:\\Development\\Github\\Gonzo3d\\Gonzo3d\\Gonzo3d.csproj": {}
   },
   "projects": {
-    "D:\\Development\\C#\\Gonzo3d\\Gonzo3d\\Gonzo3d.csproj": {
+    "D:\\Development\\Github\\Gonzo3d\\Gonzo3d\\Gonzo3d.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Development\\C#\\Gonzo3d\\Gonzo3d\\Gonzo3d.csproj",
+        "projectUniqueName": "D:\\Development\\Github\\Gonzo3d\\Gonzo3d\\Gonzo3d.csproj",
         "projectName": "Gonzo3d",
-        "projectPath": "D:\\Development\\C#\\Gonzo3d\\Gonzo3d\\Gonzo3d.csproj",
+        "projectPath": "D:\\Development\\Github\\Gonzo3d\\Gonzo3d\\Gonzo3d.csproj",
         "packagesPath": "C:\\Users\\susif\\.nuget\\packages\\",
-        "outputPath": "D:\\Development\\C#\\Gonzo3d\\Gonzo3d\\obj\\",
+        "outputPath": "D:\\Development\\Github\\Gonzo3d\\Gonzo3d\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\susif\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -39,6 +39,12 @@
       "frameworks": {
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
+          "dependencies": {
+            "OpenTK": {
+              "target": "Package",
+              "version": "[4.6.3, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",

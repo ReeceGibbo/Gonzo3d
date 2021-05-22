@@ -4,22 +4,63 @@
     <projectFile>Gonzo3d/Gonzo3d.csproj</projectFile>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c167f598-8619-48a3-aaf9-ef82c33f7bdf" name="Default Changelist" comment="" />
+    <list default="true" id="c167f598-8619-48a3-aaf9-ef82c33f7bdf" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/.idea.Gonzo3d/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Gonzo3d.sln.DotSettings.user" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Gonzo3d/Shader.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Gonzo3d/bin/Debug/netcoreapp3.1/shaders/basic.frag" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Gonzo3d/bin/Debug/netcoreapp3.1/shaders/basic.vert" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Gonzo3d/shaders/basic.frag" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Gonzo3d/shaders/basic.vert" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Gonzo3d/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Gonzo3d/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gonzo3d/Gonzo3d.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Gonzo3d/Gonzo3d.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gonzo3d/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Gonzo3d/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gonzo3d/obj/Debug/netcoreapp3.1/Gonzo3d.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Gonzo3d/obj/Debug/netcoreapp3.1/Gonzo3d.assets.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gonzo3d/obj/Debug/netcoreapp3.1/Gonzo3d.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Gonzo3d/obj/Debug/netcoreapp3.1/Gonzo3d.csprojAssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gonzo3d/obj/Gonzo3d.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/Gonzo3d/obj/Gonzo3d.csproj.nuget.dgspec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gonzo3d/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/Gonzo3d/obj/project.assets.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gonzo3d/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Gonzo3d/obj/project.nuget.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gonzo3d/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/Gonzo3d/obj/project.packagespec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gonzo3d/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/Gonzo3d/obj/rider.project.restore.info" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/A21E53A5-0F5C-42FA-ADF4-C07A6A9C5510/e4/f193a078/GameWindow.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/C0E20A29-1A46-4F56-9640-30D7C2B81997/329/FileStream.Windows.cs" root0="SKIP_HIGHLIGHTING" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <changedPaths>
+      <option value="$PROJECT_DIR$/Gonzo3d/shaders/basic.vert" />
+      <option value="$PROJECT_DIR$/Gonzo3d/shaders/basic.frag" />
+      <option value="$PROJECT_DIR$/Gonzo3d/Shader.cs" />
+      <option value="$PROJECT_DIR$/Gonzo3d/Program.cs" />
+    </changedPaths>
+  </component>
   <component name="ProjectId" id="1stdRYHuN440boUrf740324aiFr" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="DebuggerViewTab_PTCS_FirstProportionKey" value="0.34994584" />
+    <property name="DebuggerViewTab_PTCS_LastProportionKey" value="0.0" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="settings.editor.selected.configurable" value="configurable.group.appearance" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RunManager">
@@ -51,15 +92,30 @@
       <option name="presentableId" value="Default" />
       <updated>1621695815425</updated>
       <workItem from="1621695822913" duration="16000" />
+      <workItem from="1621696098082" duration="2899000" />
+      <workItem from="1621701549555" duration="7513000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
-  <component name="UnityProjectConfiguration" hasMinimizedUI="null" />
+  <component name="UnityProjectConfiguration" hasMinimizedUI="false" />
   <component name="UnityUnitTestConfiguration" currentTestLauncher="NUnit" />
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>
 </project>
