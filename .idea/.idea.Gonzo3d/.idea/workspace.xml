@@ -5,23 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c167f598-8619-48a3-aaf9-ef82c33f7bdf" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.Gonzo3d/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Gonzo3d.sln.DotSettings.user" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Gonzo3d/Shader.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Gonzo3d/bin/Debug/netcoreapp3.1/shaders/basic.frag" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Gonzo3d/bin/Debug/netcoreapp3.1/shaders/basic.vert" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Gonzo3d/shaders/basic.frag" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Gonzo3d/shaders/basic.vert" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Gonzo3d/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Gonzo3d/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Gonzo3d/Gonzo3d.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Gonzo3d/Gonzo3d.csproj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Gonzo3d/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Gonzo3d/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Gonzo3d/obj/Debug/netcoreapp3.1/Gonzo3d.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Gonzo3d/obj/Debug/netcoreapp3.1/Gonzo3d.assets.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Gonzo3d/obj/Debug/netcoreapp3.1/Gonzo3d.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Gonzo3d/obj/Debug/netcoreapp3.1/Gonzo3d.csprojAssemblyReference.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Gonzo3d/obj/Gonzo3d.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/Gonzo3d/obj/Gonzo3d.csproj.nuget.dgspec.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Gonzo3d/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/Gonzo3d/obj/project.assets.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Gonzo3d/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Gonzo3d/obj/project.nuget.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Gonzo3d/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/Gonzo3d/obj/project.packagespec.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Gonzo3d/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/Gonzo3d/obj/rider.project.restore.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gonzo3d/bin/Debug/netcoreapp3.1/Gonzo3d.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Gonzo3d/bin/Debug/netcoreapp3.1/Gonzo3d.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gonzo3d/bin/Debug/netcoreapp3.1/Gonzo3d.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Gonzo3d/bin/Debug/netcoreapp3.1/Gonzo3d.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gonzo3d/obj/Debug/netcoreapp3.1/Gonzo3d.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Gonzo3d/obj/Debug/netcoreapp3.1/Gonzo3d.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gonzo3d/obj/Debug/netcoreapp3.1/Gonzo3d.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Gonzo3d/obj/Debug/netcoreapp3.1/Gonzo3d.pdb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -93,7 +82,7 @@
       <updated>1621695815425</updated>
       <workItem from="1621695822913" duration="16000" />
       <workItem from="1621696098082" duration="2899000" />
-      <workItem from="1621701549555" duration="7513000" />
+      <workItem from="1621701549555" duration="8638000" />
     </task>
     <servers />
   </component>
