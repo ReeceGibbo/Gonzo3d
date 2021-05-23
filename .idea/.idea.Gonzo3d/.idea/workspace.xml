@@ -5,13 +5,39 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c167f598-8619-48a3-aaf9-ef82c33f7bdf" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Gonzo3d/components/Camera.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Gonzo3d/components/Material.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Gonzo3d/components/Mesh.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Gonzo3d/components/Shader.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Gonzo3d/components/Transform.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Gonzo3d/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Gonzo3d/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Gonzo3d/ecs/EcsComponent.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Gonzo3d/ecs/EcsEntity.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Gonzo3d/ecs/EcsFilter.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Gonzo3d/ecs/EcsHelpers.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Gonzo3d/ecs/EcsSystem.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Gonzo3d/ecs/EcsWorld.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ecs-2021.5.22/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ecs-2021.5.22/LICENSE.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ecs-2021.5.22/LICENSE.md.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ecs-2021.5.22/Leopotam.Ecs.asmdef" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ecs-2021.5.22/Leopotam.Ecs.asmdef.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ecs-2021.5.22/Leopotam.Ecs.csproj" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ecs-2021.5.22/Leopotam.Ecs.csproj.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ecs-2021.5.22/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ecs-2021.5.22/README.md.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ecs-2021.5.22/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ecs-2021.5.22/package.json.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ecs-2021.5.22/src.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ecs-2021.5.22/src/EcsComponent.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ecs-2021.5.22/src/EcsEntity.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ecs-2021.5.22/src/EcsFilter.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ecs-2021.5.22/src/EcsHelpers.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ecs-2021.5.22/src/EcsSystem.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ecs-2021.5.22/src/EcsWorld.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Gonzo3d/Gonzo3d.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Gonzo3d/Gonzo3d.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gonzo3d/obj/Debug/netcoreapp3.1/Gonzo3d.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Gonzo3d/obj/Debug/netcoreapp3.1/Gonzo3d.assets.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gonzo3d/obj/Debug/netcoreapp3.1/Gonzo3d.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Gonzo3d/obj/Debug/netcoreapp3.1/Gonzo3d.csprojAssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gonzo3d/obj/Gonzo3d.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/Gonzo3d/obj/Gonzo3d.csproj.nuget.dgspec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gonzo3d/obj/Gonzo3d.csproj.nuget.g.props" beforeDir="false" afterPath="$PROJECT_DIR$/Gonzo3d/obj/Gonzo3d.csproj.nuget.g.props" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gonzo3d/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/Gonzo3d/obj/project.assets.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gonzo3d/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Gonzo3d/obj/project.nuget.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gonzo3d/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/Gonzo3d/obj/project.packagespec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gonzo3d/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/Gonzo3d/obj/rider.project.restore.info" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,10 +46,6 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-  </component>
-  <component name="HighlightingSettingsPerFile">
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/A21E53A5-0F5C-42FA-ADF4-C07A6A9C5510/e4/f193a078/GameWindow.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/C0E20A29-1A46-4F56-9640-30D7C2B81997/329/FileStream.Windows.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
@@ -58,6 +80,10 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
@@ -92,6 +118,7 @@
       <workItem from="1621695822913" duration="16000" />
       <workItem from="1621696098082" duration="2899000" />
       <workItem from="1621701549555" duration="24495000" />
+      <workItem from="1621801836189" duration="860000" />
     </task>
     <servers />
   </component>
