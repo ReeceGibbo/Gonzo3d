@@ -1,2 +1,2 @@
 # Gonzo3d
-Small game engine project.
+Small game engine / game framework project.
