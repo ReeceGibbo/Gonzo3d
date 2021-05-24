@@ -1,7 +1,11 @@
 ﻿namespace Gonzo3d.components
 {
-    public class Material
+    public struct Material
     {
-        // Shader and a bunch of uniforms
+        // Shader
+        public int Shader { get; set; }
+        // Textures
+        public int Texture { get; set; }
+        // Colors?
     }
 }

@@ -5,39 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c167f598-8619-48a3-aaf9-ef82c33f7bdf" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Gonzo3d/ecs/EcsComponent.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Gonzo3d/ecs/EcsEntity.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Gonzo3d/ecs/EcsFilter.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Gonzo3d/ecs/EcsHelpers.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Gonzo3d/ecs/EcsSystem.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Gonzo3d/ecs/EcsWorld.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ecs-2021.5.22/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ecs-2021.5.22/LICENSE.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ecs-2021.5.22/LICENSE.md.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ecs-2021.5.22/Leopotam.Ecs.asmdef" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ecs-2021.5.22/Leopotam.Ecs.asmdef.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ecs-2021.5.22/Leopotam.Ecs.csproj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ecs-2021.5.22/Leopotam.Ecs.csproj.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ecs-2021.5.22/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ecs-2021.5.22/README.md.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ecs-2021.5.22/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ecs-2021.5.22/package.json.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ecs-2021.5.22/src.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ecs-2021.5.22/src/EcsComponent.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ecs-2021.5.22/src/EcsEntity.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ecs-2021.5.22/src/EcsFilter.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ecs-2021.5.22/src/EcsHelpers.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ecs-2021.5.22/src/EcsSystem.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ecs-2021.5.22/src/EcsWorld.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Gonzo3d/Gonzo3d.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Gonzo3d/Gonzo3d.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Gonzo3d/obj/Debug/netcoreapp3.1/Gonzo3d.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Gonzo3d/obj/Debug/netcoreapp3.1/Gonzo3d.assets.cache" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Gonzo3d/resources/Test.gltf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Gonzo3d/systems/MaterialGeneratorSystem.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Gonzo3d/systems/MeshGeneratorSystem.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GonzoGameTest/Class1.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GonzoGameTest/GonzoGameTest.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Gonzo3d/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Gonzo3d/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gonzo3d.sln" beforeDir="false" afterPath="$PROJECT_DIR$/Gonzo3d.sln" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gonzo3d/components/Material.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Gonzo3d/components/Material.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gonzo3d/components/Mesh.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Gonzo3d/components/Mesh.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Gonzo3d/obj/Debug/netcoreapp3.1/Gonzo3d.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Gonzo3d/obj/Debug/netcoreapp3.1/Gonzo3d.csprojAssemblyReference.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Gonzo3d/obj/Gonzo3d.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/Gonzo3d/obj/Gonzo3d.csproj.nuget.dgspec.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Gonzo3d/obj/Gonzo3d.csproj.nuget.g.props" beforeDir="false" afterPath="$PROJECT_DIR$/Gonzo3d/obj/Gonzo3d.csproj.nuget.g.props" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Gonzo3d/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/Gonzo3d/obj/project.assets.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Gonzo3d/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Gonzo3d/obj/project.nuget.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Gonzo3d/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/Gonzo3d/obj/project.packagespec.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Gonzo3d/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/Gonzo3d/obj/rider.project.restore.info" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,11 +33,14 @@
       <option value="$PROJECT_DIR$/Gonzo3d/FramesPerSecondCounter.cs" />
       <option value="$PROJECT_DIR$/Gonzo3d/Gonzo3d.csproj" />
       <option value="$PROJECT_DIR$/Gonzo3d/components/Transform.cs" />
-      <option value="$PROJECT_DIR$/Gonzo3d/components/Mesh.cs" />
       <option value="$PROJECT_DIR$/Gonzo3d/components/Shader.cs" />
-      <option value="$PROJECT_DIR$/Gonzo3d/components/Material.cs" />
       <option value="$PROJECT_DIR$/Gonzo3d/components/Camera.cs" />
       <option value="$PROJECT_DIR$/Gonzo3d/Program.cs" />
+      <option value="$PROJECT_DIR$/GonzoGameTest/Class1.cs" />
+      <option value="$PROJECT_DIR$/Gonzo3d/components/Material.cs" />
+      <option value="$PROJECT_DIR$/Gonzo3d/components/Mesh.cs" />
+      <option value="$PROJECT_DIR$/Gonzo3d/systems/MaterialGeneratorSystem.cs" />
+      <option value="$PROJECT_DIR$/Gonzo3d/systems/MeshGeneratorSystem.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1stdRYHuN440boUrf740324aiFr" />
@@ -118,7 +98,8 @@
       <workItem from="1621695822913" duration="16000" />
       <workItem from="1621696098082" duration="2899000" />
       <workItem from="1621701549555" duration="24495000" />
-      <workItem from="1621801836189" duration="860000" />
+      <workItem from="1621801836189" duration="5487000" />
+      <workItem from="1621818781327" duration="360000" />
     </task>
     <servers />
   </component>
