@@ -47,6 +47,10 @@
             "SixLabors.ImageSharp": {
               "target": "Package",
               "version": "[1.0.3, )"
+            },
+            "glTF2Loader": {
+              "target": "Package",
+              "version": "[1.0.0, )"
             }
           },
           "imports": [

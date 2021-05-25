@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Diagnostics;
 using System.Timers;
+using glTFLoader;
 using OpenTK.Graphics.OpenGL4;
 using OpenTK.Mathematics;
 using OpenTK.Windowing.Common;
@@ -47,6 +48,19 @@ namespace Gonzo3d
             height = nativeWindowSettings.Size.Y;
 
             _framesPerSecondCounter = new FramesPerSecondCounter();
+            
+            var model = Interface.LoadModel("resources/Triangle.gltf");
+
+            if (model.Buffers[0].Uri.StartsWith("data:application/octet-stream;base64,"))
+            
+            byte[] bufferData;
+            // Get scene 0
+            // Get Node 0
+            // Get Mesh 0
+            // Get Mesh POSITION Buffer Int
+            // Get Mesh INDICES Buffer Int
+            // Get Accessor objects for POSITION & INDICES
+            // Use Accessor Information to get BufferViews & Buffer info.
         }
         
         protected override void OnLoad()

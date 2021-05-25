@@ -1,6 +1,8 @@
 ﻿using System.Collections.Generic;
-using Gonzo3d.components;
+using glTFLoader;
+using glTFLoader.Schema;
 using Leopotam.Ecs;
+using Mesh = Gonzo3d.components.Mesh;
 
 namespace Gonzo3d.systems
 {
@@ -20,6 +22,17 @@ namespace Gonzo3d.systems
             foreach (var i in _meshFilter)
             {
                 ref var mesh = ref _meshFilter.Get1(i);
+
+                if (!mesh.Init)
+                {
+                    var model = Interface.LoadModel(mesh.objPath);
+                    var mainMesh = model.Meshes[0];
+
+                    foreach (var primitive in mainMesh.Primitives)
+                    {
+                        
+                    }
+                }
             }
         }
     }
