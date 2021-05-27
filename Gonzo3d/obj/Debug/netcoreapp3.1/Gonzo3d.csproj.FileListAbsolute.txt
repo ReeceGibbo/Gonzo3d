@@ -30,3 +30,7 @@ D:\Development\Github\Gonzo3d\Gonzo3d\bin\Debug\netcoreapp3.1\shaders\basic.frag
 D:\Development\Github\Gonzo3d\Gonzo3d\bin\Debug\netcoreapp3.1\shaders\basic.vert
 D:\Development\Github\Gonzo3d\Gonzo3d\bin\Debug\netcoreapp3.1\SixLabors.ImageSharp.dll
 D:\Development\Github\Gonzo3d\Gonzo3d\bin\Debug\netcoreapp3.1\resources\container.png
+D:\Development\Github\Gonzo3d\Gonzo3d\bin\Debug\netcoreapp3.1\resources\Test.gltf
+D:\Development\Github\Gonzo3d\Gonzo3d\bin\Debug\netcoreapp3.1\resources\Triangle.gltf
+D:\Development\Github\Gonzo3d\Gonzo3d\bin\Debug\netcoreapp3.1\glTFLoader.dll
+D:\Development\Github\Gonzo3d\Gonzo3d\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll

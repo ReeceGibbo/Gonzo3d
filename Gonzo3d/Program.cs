@@ -49,11 +49,11 @@ namespace Gonzo3d
 
             _framesPerSecondCounter = new FramesPerSecondCounter();
             
-            var model = Interface.LoadModel("resources/Triangle.gltf");
+            //var model = Interface.LoadModel("resources/Triangle.gltf");
 
-            if (model.Buffers[0].Uri.StartsWith("data:application/octet-stream;base64,"))
+            //if (model.Buffers[0].Uri.StartsWith("data:application/octet-stream;base64,"))
             
-            byte[] bufferData;
+            //byte[] bufferData;
             // Get scene 0
             // Get Node 0
             // Get Mesh 0
