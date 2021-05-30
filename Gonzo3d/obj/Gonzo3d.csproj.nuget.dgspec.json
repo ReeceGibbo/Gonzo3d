@@ -10,11 +10,11 @@
         "projectUniqueName": "D:\\Development\\Github\\Gonzo3d\\Gonzo3d\\Gonzo3d.csproj",
         "projectName": "Gonzo3d",
         "projectPath": "D:\\Development\\Github\\Gonzo3d\\Gonzo3d\\Gonzo3d.csproj",
-        "packagesPath": "C:\\Users\\Reece\\.nuget\\packages\\",
+        "packagesPath": "C:\\Users\\susif\\.nuget\\packages\\",
         "outputPath": "D:\\Development\\Github\\Gonzo3d\\Gonzo3d\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Reece\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\susif\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -63,18 +63,12 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "downloadDependencies": [
-            {
-              "name": "Microsoft.NETCore.App.Host.win-x64",
-              "version": "[3.1.13, 3.1.13]"
-            }
-          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.201\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.203\\RuntimeIdentifierGraph.json"
         }
       }
     }

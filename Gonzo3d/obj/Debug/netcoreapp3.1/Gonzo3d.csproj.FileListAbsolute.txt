@@ -30,7 +30,11 @@ D:\Development\Github\Gonzo3d\Gonzo3d\bin\Debug\netcoreapp3.1\shaders\basic.frag
 D:\Development\Github\Gonzo3d\Gonzo3d\bin\Debug\netcoreapp3.1\shaders\basic.vert
 D:\Development\Github\Gonzo3d\Gonzo3d\bin\Debug\netcoreapp3.1\SixLabors.ImageSharp.dll
 D:\Development\Github\Gonzo3d\Gonzo3d\bin\Debug\netcoreapp3.1\resources\container.png
-D:\Development\Github\Gonzo3d\Gonzo3d\bin\Debug\netcoreapp3.1\resources\Test.gltf
-D:\Development\Github\Gonzo3d\Gonzo3d\bin\Debug\netcoreapp3.1\resources\Triangle.gltf
-D:\Development\Github\Gonzo3d\Gonzo3d\bin\Debug\netcoreapp3.1\glTFLoader.dll
-D:\Development\Github\Gonzo3d\Gonzo3d\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+D:\Development\Github\Gonzo3d\Gonzo3d\bin\Debug\netcoreapp3.1\AssimpNet.dll
+D:\Development\Github\Gonzo3d\Gonzo3d\bin\Debug\netcoreapp3.1\runtimes\linux-x64\native\libassimp.so
+D:\Development\Github\Gonzo3d\Gonzo3d\bin\Debug\netcoreapp3.1\runtimes\osx-x64\native\libassimp.dylib
+D:\Development\Github\Gonzo3d\Gonzo3d\bin\Debug\netcoreapp3.1\runtimes\win-x64\native\assimp.dll
+D:\Development\Github\Gonzo3d\Gonzo3d\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\assimp.dll
+D:\Development\Github\Gonzo3d\Gonzo3d\bin\Debug\netcoreapp3.1\resources\teapot\teapot.mtl
+D:\Development\Github\Gonzo3d\Gonzo3d\bin\Debug\netcoreapp3.1\resources\teapot\teapot.obj
+D:\Development\Github\Gonzo3d\Gonzo3d\bin\Debug\netcoreapp3.1\resources\teapot\teapot.png

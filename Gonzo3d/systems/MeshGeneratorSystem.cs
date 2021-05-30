@@ -1,6 +1,4 @@
 ﻿using System.Collections.Generic;
-using glTFLoader;
-using glTFLoader.Schema;
 using Leopotam.Ecs;
 using Mesh = Gonzo3d.components.Mesh;
 
@@ -25,13 +23,13 @@ namespace Gonzo3d.systems
 
                 if (!mesh.Init)
                 {
-                    var model = Interface.LoadModel(mesh.objPath);
-                    var mainMesh = model.Meshes[0];
+                    //var model = Interface.LoadModel(mesh.objPath);
+                    //var mainMesh = model.Meshes[0];
 
-                    foreach (var primitive in mainMesh.Primitives)
-                    {
+                    //foreach (var primitive in mainMesh.Primitives)
+                    //{
                         
-                    }
+                    //}
                 }
             }
         }

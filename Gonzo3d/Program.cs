@@ -1,30 +1,23 @@
 ﻿using System;
 using System.Diagnostics;
-using System.Timers;
-using glTFLoader;
+using System.IO;
+using System.Reflection;
+using Assimp;
 using OpenTK.Graphics.OpenGL4;
 using OpenTK.Mathematics;
 using OpenTK.Windowing.Common;
 using OpenTK.Windowing.Desktop;
 using OpenTK.Windowing.GraphicsLibraryFramework;
+using PrimitiveType = OpenTK.Graphics.OpenGL4.PrimitiveType;
 
 namespace Gonzo3d
 {
     class Program : GameWindow
     {
-        private readonly float[] _vertices =
-        {
-            // Position         Texture coordinates
-            0.5f,  0.5f, 0.0f, 1.0f, 1.0f, // top right
-            0.5f, -0.5f, 0.0f, 1.0f, 0.0f, // bottom right
-            -0.5f, -0.5f, 0.0f, 0.0f, 0.0f, // bottom left
-            -0.5f,  0.5f, 0.0f, 0.0f, 1.0f  // top left
-        };
-
-        private uint[] indices = {
-            0, 1, 3,   // first triangle
-            1, 2, 3    // second triangle
-        };
+        // Model
+        private readonly float[] _vertices;
+        private float[] _normals;
+        private uint[] _indices;
 
         private Shader _shader;
         private Texture _texture;
@@ -48,24 +41,40 @@ namespace Gonzo3d
             height = nativeWindowSettings.Size.Y;
 
             _framesPerSecondCounter = new FramesPerSecondCounter();
-            
-            //var model = Interface.LoadModel("resources/Triangle.gltf");
 
-            //if (model.Buffers[0].Uri.StartsWith("data:application/octet-stream;base64,"))
+            var importer = new AssimpContext();
+
+            var filePath = Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), "resources",
+                "teapot/teapot.obj");
+            var scene = importer.ImportFile(filePath);
             
-            //byte[] bufferData;
-            // Get scene 0
-            // Get Node 0
-            // Get Mesh 0
-            // Get Mesh POSITION Buffer Int
-            // Get Mesh INDICES Buffer Int
-            // Get Accessor objects for POSITION & INDICES
-            // Use Accessor Information to get BufferViews & Buffer info.
+            var mesh = scene.Meshes[0];
+
+            _vertices = new float[mesh.VertexCount * 7];
+
+            var i = 0;
+            for (var index = 0; index < mesh.Vertices.Count; index++)
+            {
+                var vector = mesh.Vertices[index];
+                var normal = mesh.Normals[index];
+                
+                _vertices[i] = vector.X;
+                _vertices[i+1] = vector.Y;
+                _vertices[i+2] = vector.Z;
+                _vertices[i+3] = 0;
+                _vertices[i+4] = 0;
+                _vertices[i+5] = normal.X;
+                _vertices[i+6] = normal.Y;
+                i += 7;
+            }
+
+            _indices = mesh.GetUnsignedIndices();
         }
         
         protected override void OnLoad()
         {
             GL.ClearColor(0.6f, 0.6f, 0.6f, 1.0f);
+            GL.Enable(EnableCap.DepthTest);
 
             // Camera Matrix
             projection = Matrix4.CreatePerspectiveFieldOfView(MathHelper.DegreesToRadians(45.0f), width / height, 0.1f, 100.0f);
@@ -94,16 +103,20 @@ namespace Gonzo3d
             // Indices Buffer
             indicesBuffer = GL.GenBuffer();
             GL.BindBuffer(BufferTarget.ElementArrayBuffer, indicesBuffer);
-            GL.BufferData(BufferTarget.ElementArrayBuffer, indices.Length * sizeof(uint), indices, BufferUsageHint.StaticDraw);
+            GL.BufferData(BufferTarget.ElementArrayBuffer, _indices.Length * sizeof(uint), _indices, BufferUsageHint.StaticDraw);
             
             // Linking Vertex Attributes
             var vertexLocation = GL.GetAttribLocation(_shader.handle, "aPosition");
             GL.EnableVertexAttribArray(vertexLocation);
-            GL.VertexAttribPointer(vertexLocation, 3, VertexAttribPointerType.Float, false, 5 * sizeof(float), 0);
+            GL.VertexAttribPointer(vertexLocation, 3, VertexAttribPointerType.Float, false, 7 * sizeof(float), 0);
 
             var texCoordLocation = GL.GetAttribLocation(_shader.handle, "aTexCoord");
             GL.EnableVertexAttribArray(texCoordLocation);
-            GL.VertexAttribPointer(texCoordLocation, 2, VertexAttribPointerType.Float, false, 5 * sizeof(float), 3 * sizeof(float));
+            GL.VertexAttribPointer(texCoordLocation, 2, VertexAttribPointerType.Float, false, 7 * sizeof(float), 3 * sizeof(float));
+
+            var normalLocation = GL.GetAttribLocation(_shader.handle, "aNormals");
+            GL.EnableVertexAttribArray(normalLocation);
+            GL.VertexAttribPointer(normalLocation, 2, VertexAttribPointerType.Float, false, 7 * sizeof(float), 5 * sizeof(float));
 
             // Reset buffer after use
             GL.BindVertexArray(0);
@@ -154,13 +167,9 @@ namespace Gonzo3d
         
         protected override void OnRenderFrame(FrameEventArgs frameEventArgs)
         {
-            GL.Clear(ClearBufferMask.ColorBufferBit);
+            GL.Clear(ClearBufferMask.ColorBufferBit | ClearBufferMask.DepthBufferBit);
 
-            value += 0.00001f;
-
-            test++;
-            if (test > 1200)
-                test = 0;
+            value -= 0.0001f;
             // New drawing method with Vertex Arrays
             
             // Bind Vertex Array
@@ -171,18 +180,21 @@ namespace Gonzo3d
 
             // Bind Shader
             _shader.Use();
+
+            var modelView = Matrix4.CreateRotationY(value);
             
-            _shader.SetMatrix4("model", model);
-            view = Matrix4.CreateTranslation(value, value, -3f);
+            _shader.SetMatrix4("model", modelView);
+            view = Matrix4.CreateTranslation(0, 0, -15f);
             projection = Matrix4.CreatePerspectiveFieldOfView(MathHelper.DegreesToRadians(45.0f), width / height, 0.1f, 100.0f);
             _shader.SetMatrix4("view", view);
             _shader.SetMatrix4("projection", projection);
+            _shader.SetVector3("lightPos", new Vector3(0, -15f, -15f));
             
             // Bind Index Buffer
             //GL.BindBuffer(BufferTarget.ElementArrayBuffer, indicesBuffer);
             
             // DRAW CALL
-            GL.DrawElements(PrimitiveType.Triangles, indices.Length, DrawElementsType.UnsignedInt, 0);
+            GL.DrawElements(PrimitiveType.Triangles, _indices.Length, DrawElementsType.UnsignedInt, 0);
 
             SwapBuffers();
             base.OnRenderFrame(frameEventArgs);
@@ -190,9 +202,13 @@ namespace Gonzo3d
             // FPS Counter
             _framesPerSecondCounter.Draw();
 
-            if (test == 120)
-                Debug.WriteLine($"FPS: {_framesPerSecondCounter.FramesPerSecond}");
             
+            test++;
+            if (test > 1200)
+                test = 0;
+            
+            if (test == 1200)
+                Debug.WriteLine($"FPS: {_framesPerSecondCounter.FramesPerSecond}");
         }
         
         static void Main(string[] args)
