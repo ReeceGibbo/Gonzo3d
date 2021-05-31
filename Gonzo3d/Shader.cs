@@ -62,12 +62,16 @@ namespace Gonzo3d
             // Next, allocate the dictionary to hold the locations.
             _uniformLocations = new Dictionary<string, int>();
 
+            Debug.WriteLine($"Getting uniforms from shader... {vertexPath}");
+
             // Loop over all the uniforms,
             for (var i = 0; i < numberOfUniforms; i++)
             {
                 // get the name of this uniform,
                 var key = GL.GetActiveUniform(handle, i, out _, out _);
 
+                Debug.WriteLine(key);
+                
                 // get the location,
                 var location = GL.GetUniformLocation(handle, key);
 

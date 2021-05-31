@@ -38,3 +38,11 @@ D:\Development\Github\Gonzo3d\Gonzo3d\bin\Debug\netcoreapp3.1\runtimes\win-x86\n
 D:\Development\Github\Gonzo3d\Gonzo3d\bin\Debug\netcoreapp3.1\resources\teapot\teapot.mtl
 D:\Development\Github\Gonzo3d\Gonzo3d\bin\Debug\netcoreapp3.1\resources\teapot\teapot.obj
 D:\Development\Github\Gonzo3d\Gonzo3d\bin\Debug\netcoreapp3.1\resources\teapot\teapot.png
+D:\Development\Github\Gonzo3d\Gonzo3d\bin\Debug\netcoreapp3.1\shaders\shadow.frag
+D:\Development\Github\Gonzo3d\Gonzo3d\bin\Debug\netcoreapp3.1\shaders\shadow.vert
+D:\Development\Github\Gonzo3d\Gonzo3d\bin\Debug\netcoreapp3.1\resources\room\room.mtl
+D:\Development\Github\Gonzo3d\Gonzo3d\bin\Debug\netcoreapp3.1\resources\room\room.obj
+D:\Development\Github\Gonzo3d\Gonzo3d\bin\Debug\netcoreapp3.1\resources\room\room.png
+D:\Development\Github\Gonzo3d\Gonzo3d\bin\Debug\netcoreapp3.1\resources\satis\constructor-sketchfab.mtl
+D:\Development\Github\Gonzo3d\Gonzo3d\bin\Debug\netcoreapp3.1\resources\satis\constructor-sketchfab.obj
+D:\Development\Github\Gonzo3d\Gonzo3d\bin\Debug\netcoreapp3.1\resources\satis\constructor-sketchfab.png
