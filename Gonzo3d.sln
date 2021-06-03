@@ -2,10 +2,6 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gonzo3d", "Gonzo3d\Gonzo3d.csproj", "{231E2B19-EDD2-4BCE-849B-8665011C603D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GonzoGameTest", "GonzoGameTest\GonzoGameTest.csproj", "{8C8C5936-ECA0-4C6A-BE67-77EE1C71026B}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GLTFImporting", "GLTFImporting\GLTFImporting.csproj", "{CDD63150-4559-4E23-BADF-8E5DC9D7668F}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -16,13 +12,5 @@ Global
 		{231E2B19-EDD2-4BCE-849B-8665011C603D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{231E2B19-EDD2-4BCE-849B-8665011C603D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{231E2B19-EDD2-4BCE-849B-8665011C603D}.Release|Any CPU.Build.0 = Release|Any CPU
-		{8C8C5936-ECA0-4C6A-BE67-77EE1C71026B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{8C8C5936-ECA0-4C6A-BE67-77EE1C71026B}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{8C8C5936-ECA0-4C6A-BE67-77EE1C71026B}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{8C8C5936-ECA0-4C6A-BE67-77EE1C71026B}.Release|Any CPU.Build.0 = Release|Any CPU
-		{CDD63150-4559-4E23-BADF-8E5DC9D7668F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{CDD63150-4559-4E23-BADF-8E5DC9D7668F}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{CDD63150-4559-4E23-BADF-8E5DC9D7668F}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{CDD63150-4559-4E23-BADF-8E5DC9D7668F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

@@ -15,19 +15,10 @@ namespace Gonzo3d
 {
     class Program : GameWindow
     {
-        // Model
-        private readonly float[] _vertices;
-        private float[] _normals;
-        private uint[] _indices;
-
         private Shader _mainShader;
         private Shader _shadowShader;
         
         private Texture _texture;
-        
-        private int vertexBuffer;
-        private int indicesBuffer;
-        private int vao;
         
         // Shaders
         private int shadowMapFbo;
@@ -35,7 +26,7 @@ namespace Gonzo3d
         private const int SHADOW_MAP_WIDTH = 4096;
         private const int SHADOW_MAP_HEIGHT = 4096;
 
-        private Vector3 lightPos = new Vector3(0, 0, 15);
+        private Vector3 lightDirection = new Vector3(0.5f, -0.8f, -0.8f);
         private Vector3 meshPos = new Vector3(0, -2, 0);
         private Vector3 viewPos = new Vector3(0, 0, -15);
 
@@ -50,14 +41,7 @@ namespace Gonzo3d
         {
             width = nativeWindowSettings.Size.X;
             height = nativeWindowSettings.Size.Y;
-
-            var importer = new AssimpContext();
-
-            var filePath = Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), "resources",
-                "satis/constructor-sketchfab.obj");
-            var scene = importer.ImportFile(filePath, PostProcessSteps.Triangulate | PostProcessSteps.FlipUVs);
-            var mesh = scene.Meshes[0];
-
+            
             _vertices = new float[mesh.VertexCount * 8];
 
             var i = 0;
@@ -82,7 +66,7 @@ namespace Gonzo3d
             
             // Texture
             var texPath = Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), "resources",
-                "satis/constructor-sketchfab.png");
+                "satis/", scene.Materials[1].TextureDiffuse.FilePath);
             _texture = new Texture(texPath);
             _texture.Use(TextureUnit.Texture0);
         }
@@ -212,8 +196,8 @@ namespace Gonzo3d
 
         public void SetShadowMatrix(Shader shader)
         {
-            var lightProjection = Matrix4.CreateOrthographic(20.0f, 20.0f, 1.0f, 100.0f);
-            var lightView = Matrix4.LookAt(lightPos, new Vector3(0, 0, 0), new Vector3(0, 1, 0));
+            var lightProjection = Matrix4.CreateOrthographic(20.0f, 20.0f, 0.1f, 100.0f);
+            var lightView = Matrix4.LookAt(-viewPos, new Vector3(0, 0, 0), new Vector3(0, 1, 0));
             var lightSpaceMatrix = lightView * lightProjection;
             
             shader.SetMatrix4("lightSpaceMatrix", lightSpaceMatrix);
@@ -250,7 +234,7 @@ namespace Gonzo3d
 
 
             //_mainShader.SetVector3("viewPos", viewPos);
-            _mainShader.SetVector3("lightPos", lightPos);
+            _mainShader.SetVector3("lightDirection", lightDirection);
 
             GL.ActiveTexture(TextureUnit.Texture0);
             GL.BindTexture(TextureTarget.Texture2D, _texture.Handle);

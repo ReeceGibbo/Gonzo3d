@@ -22,13 +22,13 @@ namespace Gonzo3d
             
             GL.TexImage2D(TextureTarget.Texture2D,
                 0,
-                PixelInternalFormat.Rgba8,
+                PixelInternalFormat.Rgba32f,
                 embeddedTexture.Width,
                 embeddedTexture.Height,
                 0,
-                PixelFormat.Bgra,
+                PixelFormat.Rgba,
                 PixelType.UnsignedByte,
-                embeddedTexture.CompressedData);
+                embeddedTexture.NonCompressedData);
 
             GL.TexParameter(TextureTarget.Texture2D, TextureParameterName.TextureMinFilter, (int)TextureMinFilter.Linear);
             GL.TexParameter(TextureTarget.Texture2D, TextureParameterName.TextureMagFilter, (int)TextureMagFilter.Linear);

@@ -10,7 +10,7 @@ in vec4 fragPosLightSpace;
 uniform sampler2D diffuseTexture;
 uniform sampler2D shadowMap;
 
-uniform vec3 lightPos;
+uniform vec3 lightDirection;
 uniform vec3 viewPos;
 
 float ShadowCalculation()
@@ -20,7 +20,7 @@ float ShadowCalculation()
     float cloestDepth = texture(shadowMap, projCoords.xy).r;
     float currentDepth = projCoords.z;
     vec3 norm = normalize(normal);
-    vec3 lightDir = normalize(lightPos - fragPos);
+    vec3 lightDir = normalize(-lightDirection);
     float bias = max(0.05 * (1.0 - dot(norm, lightDir)), 0.005);
     
     // PCF
@@ -48,7 +48,7 @@ void main()
 
     vec3 ambient = vec3(0.2, 0.2, 0.2) * color;
     
-    vec3 lightDir = normalize(lightPos - fragPos);
+    vec3 lightDir = normalize(-lightDirection);
     float diff = max(dot(lightDir, norm), 0.0);
     vec3 diffuse = diff * lightColor;
     
