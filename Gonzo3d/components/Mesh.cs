@@ -14,8 +14,8 @@ namespace Gonzo3d.components
         public uint[] Indices { get; set; }
         
         // OpenGL
-        private int Vao { get; set; }
-        private int Vbo { get; set; }
-        private int Ebo { get; set; }
+        public int Vao { get; set; }
+        public int Vbo { get; set; }
+        public int Ebo { get; set; }
     }
 }

@@ -1,26 +1,57 @@
 ﻿using System.Collections.Generic;
 using Gonzo3d.components;
 using Leopotam.Ecs;
+using OpenTK.Graphics.OpenGL4;
 
 namespace Gonzo3d.systems
 {
-    public class MaterialGeneratorSystem : IEcsInitSystem, IEcsRunSystem
+    public class MaterialGeneratorSystem : IEcsRunSystem
     {
         
-        private Dictionary<string, int> _textures;
-        private Dictionary<string, int> _shaders;
-        
         private EcsWorld _world;
-        
-        public void Init()
-        {
-            _textures = new Dictionary<string, int>();
-            _shaders = new Dictionary<string, int>();
-        }
+        private EcsFilter<Mesh, Material> _materialFilter;
+        private EcsFilter<Shader> _shadersFilter;
 
         public void Run()
         {
-            
+            foreach (var i in _materialFilter)
+            {
+                ref var mesh = ref _materialFilter.Get1(i);
+                ref var material = ref _materialFilter.Get2(i);
+
+                if (mesh.Init && !material.Init)
+                {
+                    foreach (var s in _shadersFilter)
+                    {
+                        ref var shader = ref _shadersFilter.Get1(s);
+
+                        if (shader.Name == material.ShaderToUse && shader.Compiled)
+                        {
+                            SetupMaterial(ref mesh, ref material, ref shader);
+                        }
+                    }
+                }
+            }
+        }
+
+        private void SetupMaterial(ref Mesh mesh, ref Material material, ref Shader shader)
+        {
+            GL.BindBuffer(BufferTarget.ArrayBuffer, mesh.Vbo);
+
+            // Tell the GPU where the vertices data is
+            material.VertexLocation = GL.GetAttribLocation(shader.Handle, "aPosition");
+            GL.EnableVertexAttribArray(material.VertexLocation);
+            GL.VertexAttribPointer(material.VertexLocation, 3, VertexAttribPointerType.Float, false, 8 * sizeof(float), 0);
+                    
+            // Texture Coords
+            material.TexCoordLocation = GL.GetAttribLocation(shader.Handle, "aTexCoord");
+            GL.EnableVertexAttribArray(material.TexCoordLocation);
+            GL.VertexAttribPointer(material.TexCoordLocation, 2, VertexAttribPointerType.Float, false, 8 * sizeof(float), 3 * sizeof(float));
+                    
+            // Normals
+            material.NormalLocation = GL.GetAttribLocation(shader.Handle, "aNormals");
+            GL.EnableVertexAttribArray(material.NormalLocation);
+            GL.VertexAttribPointer(material.NormalLocation, 3, VertexAttribPointerType.Float, false, 8 * sizeof(float), 5 * sizeof(float));
         }
     }
 }

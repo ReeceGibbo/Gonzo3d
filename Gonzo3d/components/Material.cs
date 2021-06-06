@@ -2,10 +2,11 @@
 {
     public struct Material
     {
-        // Shader
-        public int Shader { get; set; }
-        // Textures
-        public int Texture { get; set; }
-        // Colors?
+        public bool Init { get; set; }
+        public string ShaderToUse { get; set; }
+        
+        public int VertexLocation { get; set; }
+        public int TexCoordLocation { get; set; }
+        public int NormalLocation { get; set; }
     }
 }
