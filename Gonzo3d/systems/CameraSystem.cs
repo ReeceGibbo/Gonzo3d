@@ -14,11 +14,20 @@ namespace Gonzo3d.systems
         private float fov;
         private float depthNear;
         private float depthFar;
+
+        private int width;
+        private int height;
+
+        public CameraSystem(int width, int height)
+        {
+            this.width = width;
+            this.height = height;
+        }
         
         public void Init()
         {
-            aspectRatio = 16f / 9f;
-            fov = 90f;
+            aspectRatio = (float) width / (float) height;
+            fov = 65f;
             depthNear = 0.01f;
             depthFar = 100.0f;
         }
@@ -56,7 +65,8 @@ namespace Gonzo3d.systems
 
         private void UpdateCamera(ref Camera camera, ref Transform transform)
         {
-            camera.View = Matrix4.CreateTranslation(transform.Position.X, transform.Position.Y, transform.Position.Z);
+            camera.View = Matrix4.CreateTranslation(transform.Position.X, transform.Position.Y, transform.Position.Z) *
+                          Matrix4.CreateFromQuaternion(new Quaternion(transform.EulerAngles.X, transform.EulerAngles.Y, transform.EulerAngles.Z));
             camera.Update = false;
         }
 

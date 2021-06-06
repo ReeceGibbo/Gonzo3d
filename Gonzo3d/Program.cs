@@ -9,7 +9,6 @@ using OpenTK.Mathematics;
 using OpenTK.Windowing.Common;
 using OpenTK.Windowing.Desktop;
 using OpenTK.Windowing.GraphicsLibraryFramework;
-using Vector3 = System.Numerics.Vector3;
 
 namespace Gonzo3d
 {
@@ -55,8 +54,9 @@ namespace Gonzo3d
             _systems.Add(new ShaderGeneratorSystem());
             _systems.Add(new MeshGeneratorSystem());
             _systems.Add(new MaterialGeneratorSystem());
-            _systems.Add(new CameraSystem());
+            _systems.Add(new CameraSystem(width, height));
             _systems.Add(new RenderingSystem(width, height));
+            _systems.Add(new CameraMovementSystem());
             _systems.Init();
 
             // Shaders
@@ -151,6 +151,8 @@ namespace Gonzo3d
         
         protected override void OnUpdateFrame(FrameEventArgs frameEventArgs)
         {
+            InputManager.KeyboardState = KeyboardState.GetSnapshot();
+            InputManager.MouseState = MouseState.GetSnapshot();
             var input = KeyboardState.GetSnapshot();
 
             if (input.IsKeyDown(Keys.Escape))
