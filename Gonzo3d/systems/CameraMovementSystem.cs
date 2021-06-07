@@ -24,8 +24,8 @@ namespace Gonzo3d.systems
                 // Position Movement
                 var position = transform.Position;
 
-                var quaternion = new Quaternion(-transform.EulerAngles.X, -transform.EulerAngles.Y,
-                    transform.EulerAngles.Z);
+                var quaternion = new Quaternion(0, -transform.EulerAngles.Y,
+                    0);
 
                 var movement = new Vector3(0, 0, 0);
                 
@@ -45,8 +45,20 @@ namespace Gonzo3d.systems
                 {
                     movement.X = -1;
                 }
+                
+                // Up down movement
+                var upDown = 0f;
+                if (keyboard.IsKeyDown(Keys.Space))
+                {
+                    upDown -= speed;
+                }
 
-                transform.Position = position + (quaternion * movement * speed);
+                if (keyboard.IsKeyDown(Keys.LeftShift))
+                {
+                    upDown += speed;
+                }
+
+                transform.Position = position + (quaternion * movement * speed) + new Vector3(0, upDown, 0);
 
                 // Rotation Movement
                 var eulerAngles = transform.EulerAngles;

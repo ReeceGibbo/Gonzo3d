@@ -6,7 +6,8 @@ namespace Gonzo3d.components
     {
         public bool Loaded { get; set; }
         public bool Init { get; set; }
-        public string Path { get; set; }
+        public string RootPath { get; set; }
+        public string File { get; set; }
         
         public Vector3[] Vertices { get; set; }
         public Vector3[] Normals { get; set; }

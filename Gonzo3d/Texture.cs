@@ -10,37 +10,15 @@ namespace Gonzo3d
 {
     public class Texture
     {
+        public int Handle { get; private set; }
 
-        public readonly int Handle;
-
-        public Texture(EmbeddedTexture embeddedTexture)
+        public Texture(string name, string path)
         {
-            Handle = GL.GenTexture();
-
-            GL.ActiveTexture(TextureUnit.Texture0);
-            GL.BindTexture(TextureTarget.Texture2D, Handle);
-            
-            GL.TexImage2D(TextureTarget.Texture2D,
-                0,
-                PixelInternalFormat.Rgba32f,
-                embeddedTexture.Width,
-                embeddedTexture.Height,
-                0,
-                PixelFormat.Rgba,
-                PixelType.UnsignedByte,
-                embeddedTexture.NonCompressedData);
-
-            GL.TexParameter(TextureTarget.Texture2D, TextureParameterName.TextureMinFilter, (int)TextureMinFilter.Linear);
-            GL.TexParameter(TextureTarget.Texture2D, TextureParameterName.TextureMagFilter, (int)TextureMagFilter.Linear);
-
-            GL.TexParameter(TextureTarget.Texture2D, TextureParameterName.TextureWrapS, (int)TextureWrapMode.Repeat);
-            GL.TexParameter(TextureTarget.Texture2D, TextureParameterName.TextureWrapT, (int)TextureWrapMode.Repeat);
-
-            // Next, generate mipmaps.
-            GL.GenerateMipmap(GenerateMipmapTarget.Texture2D);
+            TextureManager.AddTexture(name, this);
+            BuildTexture(path);
         }
-        
-        public Texture(string path)
+
+        public void BuildTexture(string path)
         {
             Handle = GL.GenTexture();
 
@@ -72,7 +50,6 @@ namespace Gonzo3d
 
             // Next, generate mipmaps.
             GL.GenerateMipmap(GenerateMipmapTarget.Texture2D);
-
         }
 
         public void Use(TextureUnit unit)

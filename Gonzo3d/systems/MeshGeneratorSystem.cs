@@ -1,11 +1,11 @@
-﻿using System.Collections.Generic;
-using System.IO;
+﻿using System.IO;
 using System.Linq;
 using System.Numerics;
 using System.Reflection;
 using Assimp;
 using Leopotam.Ecs;
 using OpenTK.Graphics.OpenGL4;
+using Material = Gonzo3d.components.Material;
 using Mesh = Gonzo3d.components.Mesh;
 
 namespace Gonzo3d.systems
@@ -13,7 +13,7 @@ namespace Gonzo3d.systems
     public class MeshGeneratorSystem : IEcsInitSystem, IEcsRunSystem
     {
         private EcsWorld _world;
-        private EcsFilter<Mesh> _meshFilter;
+        private EcsFilter<Mesh, Material> _meshFilter;
 
         private AssimpContext _assimp;
         
@@ -27,10 +27,11 @@ namespace Gonzo3d.systems
             foreach (var i in _meshFilter)
             {
                 ref var mesh = ref _meshFilter.Get1(i);
+                ref var material = ref _meshFilter.Get2(i);
 
                 if (!mesh.Loaded)
                 {
-                    LoadModel(ref mesh);
+                    LoadModel(ref mesh, ref material);
                 }
                 else if (mesh.Loaded && !mesh.Init)
                 {
@@ -39,11 +40,11 @@ namespace Gonzo3d.systems
             }
         }
 
-        private void LoadModel(ref Mesh mesh)
+        private void LoadModel(ref Mesh mesh, ref Material material)
         {
-            var filePath = Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), "resources", mesh.Path);
+            var modelPath = Path.Combine(mesh.RootPath, mesh.File);
 
-            var scene = _assimp.ImportFile(filePath, PostProcessSteps.Triangulate | PostProcessSteps.FlipUVs);
+            var scene = _assimp.ImportFile(modelPath, PostProcessSteps.Triangulate | PostProcessSteps.FlipUVs);
             var sceneMesh = scene.Meshes[0];
 
             var vertices = sceneMesh.Vertices.Select(vector => new Vector3(vector.X, vector.Y, vector.Z)).ToArray();
@@ -54,6 +55,17 @@ namespace Gonzo3d.systems
             mesh.Normals = normals;
             mesh.Uvs = uvs;
             mesh.Indices = sceneMesh.GetUnsignedIndices();
+            
+            // Load Textures and Material from Model
+            var matIndex = sceneMesh.MaterialIndex;
+            var mat = scene.Materials[matIndex];
+
+            if (mat.HasTextureDiffuse)
+            {
+                var texturePath = Path.Combine(mesh.RootPath, mat.TextureDiffuse.FilePath);
+                TextureManager.CreateTexture(mat.TextureDiffuse.FilePath, texturePath);
+                material.DiffuseTexture = mat.TextureDiffuse.FilePath;
+            }
 
             mesh.Loaded = true;
         }

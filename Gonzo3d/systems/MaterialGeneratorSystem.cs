@@ -10,7 +10,6 @@ namespace Gonzo3d.systems
         
         private EcsWorld _world;
         private EcsFilter<Mesh, Material> _materialFilter;
-        private EcsFilter<Shader> _shadersFilter;
 
         public void Run()
         {
@@ -21,21 +20,15 @@ namespace Gonzo3d.systems
 
                 if (mesh.Init && !material.Init)
                 {
-                    foreach (var s in _shadersFilter)
-                    {
-                        ref var shader = ref _shadersFilter.Get1(s);
-
-                        if (shader.Name == material.ShaderToUse && shader.Compiled)
-                        {
-                            SetupMaterial(ref mesh, ref material, ref shader);
-                        }
-                    }
+                    SetupMaterial(ref mesh, ref material);
                 }
             }
         }
 
-        private void SetupMaterial(ref Mesh mesh, ref Material material, ref Shader shader)
+        private void SetupMaterial(ref Mesh mesh, ref Material material)
         {
+            var shader = ShaderManager.GetShader(material.ShaderToUse);
+            
             GL.BindBuffer(BufferTarget.ArrayBuffer, mesh.Vbo);
 
             // Tell the GPU where the vertices data is

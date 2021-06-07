@@ -6,17 +6,41 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c167f598-8619-48a3-aaf9-ef82c33f7bdf" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Gonzo3d/InputManager.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Gonzo3d/systems/CameraMovementSystem.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Gonzo3d/Game.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Gonzo3d/ShaderManager.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Gonzo3d/ShadowMap.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Gonzo3d/TextureManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Gonzo3d/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Gonzo3d/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Gonzo3d/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Gonzo3d/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gonzo3d/ShaderHelper.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gonzo3d/Texture.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Gonzo3d/Texture.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Gonzo3d/bin/Debug/netcoreapp3.1/Gonzo3d.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Gonzo3d/bin/Debug/netcoreapp3.1/Gonzo3d.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gonzo3d/bin/Debug/netcoreapp3.1/Gonzo3d.exe" beforeDir="false" afterPath="$PROJECT_DIR$/Gonzo3d/bin/Debug/netcoreapp3.1/Gonzo3d.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Gonzo3d/bin/Debug/netcoreapp3.1/Gonzo3d.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Gonzo3d/bin/Debug/netcoreapp3.1/Gonzo3d.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Gonzo3d/components/Transform.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Gonzo3d/components/Transform.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gonzo3d/bin/Debug/netcoreapp3.1/Gonzo3d.runtimeconfig.dev.json" beforeDir="false" afterPath="$PROJECT_DIR$/Gonzo3d/bin/Debug/netcoreapp3.1/Gonzo3d.runtimeconfig.dev.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gonzo3d/bin/Debug/netcoreapp3.1/shaders/simple.frag" beforeDir="false" afterPath="$PROJECT_DIR$/Gonzo3d/bin/Debug/netcoreapp3.1/shaders/simple.frag" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gonzo3d/components/Material.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Gonzo3d/components/Material.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gonzo3d/components/Mesh.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Gonzo3d/components/Mesh.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gonzo3d/components/Shader.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gonzo3d/obj/Debug/netcoreapp3.1/Gonzo3d.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Gonzo3d/obj/Debug/netcoreapp3.1/Gonzo3d.assets.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Gonzo3d/obj/Debug/netcoreapp3.1/Gonzo3d.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Gonzo3d/obj/Debug/netcoreapp3.1/Gonzo3d.csproj.CoreCompileInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gonzo3d/obj/Debug/netcoreapp3.1/Gonzo3d.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Gonzo3d/obj/Debug/netcoreapp3.1/Gonzo3d.csprojAssemblyReference.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Gonzo3d/obj/Debug/netcoreapp3.1/Gonzo3d.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Gonzo3d/obj/Debug/netcoreapp3.1/Gonzo3d.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gonzo3d/obj/Debug/netcoreapp3.1/Gonzo3d.genruntimeconfig.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Gonzo3d/obj/Debug/netcoreapp3.1/Gonzo3d.genruntimeconfig.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Gonzo3d/obj/Debug/netcoreapp3.1/Gonzo3d.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Gonzo3d/obj/Debug/netcoreapp3.1/Gonzo3d.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Gonzo3d/systems/CameraSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Gonzo3d/systems/CameraSystem.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gonzo3d/obj/Debug/netcoreapp3.1/apphost.exe" beforeDir="false" afterPath="$PROJECT_DIR$/Gonzo3d/obj/Debug/netcoreapp3.1/apphost.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gonzo3d/obj/Gonzo3d.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/Gonzo3d/obj/Gonzo3d.csproj.nuget.dgspec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gonzo3d/obj/Gonzo3d.csproj.nuget.g.props" beforeDir="false" afterPath="$PROJECT_DIR$/Gonzo3d/obj/Gonzo3d.csproj.nuget.g.props" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gonzo3d/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/Gonzo3d/obj/project.assets.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gonzo3d/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Gonzo3d/obj/project.nuget.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gonzo3d/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/Gonzo3d/obj/project.packagespec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gonzo3d/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/Gonzo3d/obj/rider.project.restore.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gonzo3d/shaders/simple.frag" beforeDir="false" afterPath="$PROJECT_DIR$/Gonzo3d/shaders/simple.frag" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gonzo3d/systems/CameraMovementSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Gonzo3d/systems/CameraMovementSystem.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gonzo3d/systems/MaterialGeneratorSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Gonzo3d/systems/MaterialGeneratorSystem.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gonzo3d/systems/MeshGeneratorSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Gonzo3d/systems/MeshGeneratorSystem.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gonzo3d/systems/RenderingSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Gonzo3d/systems/RenderingSystem.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gonzo3d/systems/ShaderGeneratorSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Gonzo3d/Shader.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,9 +59,11 @@
     </file-type-list>
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/267F891A-8BC6-49EF-996D-4CC99F8ACD38/6/ThrowHelper.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/BC542A5C-3AD0-4C34-A080-02E941B52719/D3/ThrowHelper.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/FE0463C2-E216-4F66-9E8E-47435B399E7C/fa/d9bc8e23/AssimpContext.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/C0E20A29-1A46-4F56-9640-30D7C2B81997/D3/ThrowHelper.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/A21E53A5-0F5C-42FA-ADF4-C07A6A9C5510/e4/f193a078/GameWindow.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/267F891A-8BC6-49EF-996D-4CC99F8ACD38/6/ThrowHelper.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/BC542A5C-3AD0-4C34-A080-02E941B52719/329/FileStream.Windows.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
@@ -49,28 +75,33 @@
       <option value="$PROJECT_DIR$/Gonzo3d/shaders/basic.vert" />
       <option value="$PROJECT_DIR$/Gonzo3d/shaders/shadow.vert" />
       <option value="$PROJECT_DIR$/Gonzo3d/shaders/shadow.frag" />
-      <option value="$PROJECT_DIR$/Gonzo3d/Shader.cs" />
       <option value="$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/FE0463C2-E216-4F66-9E8E-47435B399E7C/fa/d9bc8e23/AssimpContext.cs" />
-      <option value="$PROJECT_DIR$/Gonzo3d/Texture.cs" />
       <option value="$PROJECT_DIR$/Gonzo3d/shaders/basic.frag" />
-      <option value="$PROJECT_DIR$/Gonzo3d/components/Mesh.cs" />
       <option value="$PROJECT_DIR$/Gonzo3d/components/Camera.cs" />
       <option value="$PROJECT_DIR$/Gonzo3d/ShaderOld.cs" />
       <option value="$PROJECT_DIR$/Gonzo3d/ShaderHelper" />
-      <option value="$PROJECT_DIR$/Gonzo3d/systems/MeshGeneratorSystem.cs" />
       <option value="$PROJECT_DIR$/Gonzo3d/shaders/simple.vert" />
-      <option value="$PROJECT_DIR$/Gonzo3d/shaders/simple.frag" />
       <option value="$PROJECT_DIR$/Gonzo3d/components/Shader.cs" />
-      <option value="$PROJECT_DIR$/Gonzo3d/ShaderHelper.cs" />
-      <option value="$PROJECT_DIR$/Gonzo3d/components/Material.cs" />
-      <option value="$PROJECT_DIR$/Gonzo3d/systems/MaterialGeneratorSystem.cs" />
-      <option value="$PROJECT_DIR$/Gonzo3d/systems/ShaderGeneratorSystem.cs" />
-      <option value="$PROJECT_DIR$/Gonzo3d/systems/RenderingSystem.cs" />
       <option value="$PROJECT_DIR$/Gonzo3d/InputManager.cs" />
       <option value="$PROJECT_DIR$/Gonzo3d/components/Transform.cs" />
-      <option value="$PROJECT_DIR$/Gonzo3d/systems/CameraMovementSystem.cs" />
-      <option value="$PROJECT_DIR$/Gonzo3d/Program.cs" />
       <option value="$PROJECT_DIR$/Gonzo3d/systems/CameraSystem.cs" />
+      <option value="$PROJECT_DIR$/Gonzo3d/Program.cs" />
+      <option value="$PROJECT_DIR$/Gonzo3d/systems/CameraMovementSystem.cs" />
+      <option value="$PROJECT_DIR$/Gonzo3d/ShaderManager.cs" />
+      <option value="$PROJECT_DIR$/Gonzo3d/systems/ShaderGeneratorSystem.cs" />
+      <option value="$PROJECT_DIR$/Gonzo3d/ShaderHelper.cs" />
+      <option value="$PROJECT_DIR$/Gonzo3d/NewShader.cs" />
+      <option value="$PROJECT_DIR$/Gonzo3d/Shader.cs" />
+      <option value="$PROJECT_DIR$/Gonzo3d/components/Material.cs" />
+      <option value="$PROJECT_DIR$/Gonzo3d/systems/MaterialGeneratorSystem.cs" />
+      <option value="$PROJECT_DIR$/Gonzo3d/Texture.cs" />
+      <option value="$PROJECT_DIR$/Gonzo3d/TextureManager.cs" />
+      <option value="$PROJECT_DIR$/Gonzo3d/systems/MeshGeneratorSystem.cs" />
+      <option value="$PROJECT_DIR$/Gonzo3d/shaders/simple.frag" />
+      <option value="$PROJECT_DIR$/Gonzo3d/ShadowMap.cs" />
+      <option value="$PROJECT_DIR$/Gonzo3d/Game.cs" />
+      <option value="$PROJECT_DIR$/Gonzo3d/systems/RenderingSystem.cs" />
+      <option value="$PROJECT_DIR$/Gonzo3d/components/Mesh.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1stdRYHuN440boUrf740324aiFr" />
@@ -160,6 +191,7 @@
       <workItem from="1622493434866" duration="7455000" />
       <workItem from="1622932049641" duration="2793000" />
       <workItem from="1622985640031" duration="17603000" />
+      <workItem from="1623010454139" duration="12083000" />
     </task>
     <servers />
   </component>

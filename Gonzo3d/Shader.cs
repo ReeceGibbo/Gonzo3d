@@ -1,53 +1,38 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Diagnostics;
 using System.IO;
 using System.Text;
-using Gonzo3d.components;
-using Leopotam.Ecs;
 using OpenTK.Graphics.OpenGL4;
+using OpenTK.Mathematics;
 
-namespace Gonzo3d.systems
+namespace Gonzo3d
 {
-    public class ShaderGeneratorSystem : IEcsInitSystem, IEcsRunSystem
+    public class Shader
     {
-        private EcsWorld _world;
-        
-        private EcsFilter<Shader> _shaderFilter;
+        public int Handle { get; private set; }
+        private Dictionary<string, int> UniformLocations;
 
-        private Dictionary<string, int> _shaders;
-        
-        public void Init()
+        public Shader(string name, string vertexPath, string fragmentPath)
         {
-            _shaders = new Dictionary<string, int>();
+            ShaderManager.AddShader(name, this);
+            
+            UniformLocations = new Dictionary<string, int>();
+            
+            BuildShader(vertexPath, fragmentPath);
         }
         
-        public void Run()
-        {
-            foreach (var i in _shaderFilter)
-            {
-                ref var shader = ref _shaderFilter.Get1(i);
-
-                if (!shader.Compiled)
-                {
-                    CompileShader(ref shader);
-                    _shaders.Add(shader.Name, shader.Handle);
-                }
-            }
-        }
-
-        private void CompileShader(ref Shader shader)
+        private void BuildShader(string vertexPath, string fragmentPath)
         {
             string vertexShaderSource;
 
-            using (var reader = new StreamReader(shader.VertexPath, Encoding.UTF8))
+            using (var reader = new StreamReader(vertexPath, Encoding.UTF8))
             {
                 vertexShaderSource = reader.ReadToEnd();
             }
 
             string fragmentShaderSource;
 
-            using (var reader = new StreamReader(shader.FragmentPath, Encoding.UTF8))
+            using (var reader = new StreamReader(fragmentPath, Encoding.UTF8))
             {
                 fragmentShaderSource = reader.ReadToEnd();
             }
@@ -60,32 +45,30 @@ namespace Gonzo3d.systems
             GL.ShaderSource(fragmentShader, fragmentShaderSource);
             CompileShader(fragmentShader);
 
-            shader.Handle = GL.CreateProgram();
-            GL.AttachShader(shader.Handle, vertexShader);
-            GL.AttachShader(shader.Handle, fragmentShader);
+            Handle = GL.CreateProgram();
+            GL.AttachShader(Handle, vertexShader);
+            GL.AttachShader(Handle, fragmentShader);
 
-            LinkProgram(shader.Handle);
+            LinkProgram(Handle);
             
             // Cleanup
-            GL.DetachShader(shader.Handle, vertexShader);
-            GL.DetachShader(shader.Handle, fragmentShader);
+            GL.DetachShader(Handle, vertexShader);
+            GL.DetachShader(Handle, fragmentShader);
             GL.DeleteShader(vertexShader);
             GL.DeleteShader(fragmentShader);
             
             // Cache Shader Uniform Locations
-            GL.UseProgram(shader.Handle);
-            GL.GetProgram(shader.Handle, GetProgramParameterName.ActiveUniforms, out var numberOfUniforms);
-            shader.UniformLocations = new Dictionary<string, int>();
+            GL.UseProgram(Handle);
+            GL.GetProgram(Handle, GetProgramParameterName.ActiveUniforms, out var numberOfUniforms);
+            UniformLocations = new Dictionary<string, int>();
 
             for (var i = 0; i < numberOfUniforms; i++)
             {
-                var key = GL.GetActiveUniform(shader.Handle, i, out _, out _);
-                var location = GL.GetUniformLocation(shader.Handle, key);
+                var key = GL.GetActiveUniform(Handle, i, out _, out _);
+                var location = GL.GetUniformLocation(Handle, key);
 
-                shader.UniformLocations.Add(key, location);
+                UniformLocations.Add(key, location);
             }
-
-            shader.Compiled = true;
         }
         
         private void CompileShader(int shader)
@@ -115,6 +98,24 @@ namespace Gonzo3d.systems
                 // We can use `GL.GetProgramInfoLog(program)` to get information about the error.
                 throw new Exception($"Error occurred whilst linking Program({program})");
             }
+        }
+        
+        public void SetInt(string name, int data)
+        {
+            if (UniformLocations.ContainsKey(name))
+                GL.Uniform1(UniformLocations[name], data);
+        }
+
+        public void SetMatrix4(string name, Matrix4 data)
+        {
+            if (UniformLocations.ContainsKey(name))
+                GL.UniformMatrix4(UniformLocations[name], true, ref data);
+        }
+        
+        public void SetVector3(string name, Vector3 data)
+        {
+            if (UniformLocations.ContainsKey(name))
+                GL.Uniform3(UniformLocations[name], ref data);
         }
         
     }
