@@ -45,6 +45,8 @@ namespace Gonzo3d.systems
             material.NormalLocation = GL.GetAttribLocation(shader.Handle, "aNormals");
             GL.EnableVertexAttribArray(material.NormalLocation);
             GL.VertexAttribPointer(material.NormalLocation, 3, VertexAttribPointerType.Float, false, 8 * sizeof(float), 5 * sizeof(float));
+
+            material.Init = true;
         }
     }
 }

@@ -44,7 +44,7 @@ namespace Gonzo3d.systems
         {
             var modelPath = Path.Combine(mesh.RootPath, mesh.File);
 
-            var scene = _assimp.ImportFile(modelPath, PostProcessSteps.Triangulate | PostProcessSteps.FlipUVs);
+            var scene = _assimp.ImportFile(modelPath, PostProcessSteps.Triangulate | PostProcessSteps.FlipUVs | PostProcessSteps.OptimizeMeshes);
             var sceneMesh = scene.Meshes[0];
 
             var vertices = sceneMesh.Vertices.Select(vector => new Vector3(vector.X, vector.Y, vector.Z)).ToArray();
@@ -62,9 +62,12 @@ namespace Gonzo3d.systems
 
             if (mat.HasTextureDiffuse)
             {
-                var texturePath = Path.Combine(mesh.RootPath, mat.TextureDiffuse.FilePath);
-                TextureManager.CreateTexture(mat.TextureDiffuse.FilePath, texturePath);
-                material.DiffuseTexture = mat.TextureDiffuse.FilePath;
+                if (!TextureManager.HasTexture(mat.TextureDiffuse.FilePath))
+                {
+                    var texturePath = Path.Combine(mesh.RootPath, mat.TextureDiffuse.FilePath);
+                    TextureManager.CreateTexture(mat.TextureDiffuse.FilePath, texturePath);
+                    material.DiffuseTexture = mat.TextureDiffuse.FilePath;
+                }
             }
 
             mesh.Loaded = true;

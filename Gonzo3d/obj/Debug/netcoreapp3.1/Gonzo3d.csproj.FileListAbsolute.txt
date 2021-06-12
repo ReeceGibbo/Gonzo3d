@@ -48,3 +48,6 @@ D:\Development\Github\Gonzo3d\Gonzo3d\bin\Debug\netcoreapp3.1\resources\satis\co
 D:\Development\Github\Gonzo3d\Gonzo3d\bin\Debug\netcoreapp3.1\resources\satis\constructor-sketchfab.png
 D:\Development\Github\Gonzo3d\Gonzo3d\bin\Debug\netcoreapp3.1\shaders\simple.frag
 D:\Development\Github\Gonzo3d\Gonzo3d\bin\Debug\netcoreapp3.1\shaders\simple.vert
+D:\Development\Github\Gonzo3d\Gonzo3d\bin\Debug\netcoreapp3.1\resources\scene\scene.bin
+D:\Development\Github\Gonzo3d\Gonzo3d\bin\Debug\netcoreapp3.1\resources\scene\scene.gltf
+D:\Development\Github\Gonzo3d\Gonzo3d\bin\Debug\netcoreapp3.1\resources\scene\textures\material_baseColor.png

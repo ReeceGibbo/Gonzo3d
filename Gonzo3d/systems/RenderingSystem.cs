@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Diagnostics;
 using Gonzo3d.components;
 using Leopotam.Ecs;
 using OpenTK.Graphics.OpenGL4;
@@ -45,9 +46,12 @@ namespace Gonzo3d.systems
                 ref var mesh = ref _meshFilter.Get1(i);
                 ref var material = ref _meshFilter.Get2(i);
                 ref var transform = ref _meshFilter.Get3(i);
-                
-                ShadowPass(ref mesh, ref material, ref transform, ref camera, ref cameraTransform);
-                NormalPass(ref mesh, ref material, ref transform, ref camera, ref cameraTransform);
+
+                if (mesh.Init && material.Init)
+                {
+                    ShadowPass(ref mesh, ref material, ref transform, ref camera, ref cameraTransform);
+                    NormalPass(ref mesh, ref material, ref transform, ref camera, ref cameraTransform);
+                }
             }
         }
 

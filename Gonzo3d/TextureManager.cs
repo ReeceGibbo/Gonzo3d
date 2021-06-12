@@ -20,7 +20,15 @@ namespace Gonzo3d
 
         public static Texture GetTexture(string texture)
         {
-            return textures.ContainsKey(texture) ? textures[texture] : null;
+            if (textures.ContainsKey(texture))
+                return textures[texture];
+     
+            return null;
+        }
+        
+        public static bool HasTexture(string texture)
+        {
+            return textures.ContainsKey(texture);
         }
 
         public static void CreateTexture(string name, string path)

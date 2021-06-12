@@ -87,6 +87,27 @@ namespace Gonzo3d
                 RootPath = Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), "resources", "satis"),
                 File = "constructor-sketchfab.obj"
             });
+            
+            // Second Mesh
+            /*
+            var twoMesh = _world.NewEntity();
+            twoMesh.Replace(new Transform
+            {
+                Position = new Vector3(10, -2, 0),
+                Scale = new Vector3(0.5f, 0.5f, 0.5f)
+            });
+            twoMesh.Replace(new Material
+            {
+                ShaderToUse = "MainShader"
+            });
+            twoMesh.Replace(new Mesh
+            {
+                RootPath = Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), "resources", "satis"),
+                File = "constructor-sketchfab.obj"
+            });
+            */
+            //var twoMesh = mesh.Copy();
+            //twoMesh.Get<Transform>().Position = new Vector3(10, -2, 0);
 
             base.OnLoad();
         }
@@ -128,9 +149,6 @@ namespace Gonzo3d
         
         protected override void OnRenderFrame(FrameEventArgs frameEventArgs)
         {
-            //DrawShadowPass();
-            //DrawNormalPass();
-            
             _systems.Run();
             
             SwapBuffers();
